@@ -7,7 +7,7 @@ def onNewValue(sensor_id, value, time, tempListObj):
 
 def maxPeriod(sensor_id, mindestwert):
     i = 0
-    hoechstesPeriod = 0
+    highestPeriod = 0
 
     while i < len(temperaturwerte[sensor_id]):
         period = 0
@@ -15,9 +15,9 @@ def maxPeriod(sensor_id, mindestwert):
             period = period + 1
             i = i + 1
 
-        if period > hoechstesPeriod:
-            hoechstesPeriod = period
+        if period > highestPeriod:
+            highestPeriod = period
         
         i = i + 1
 
-    return hoechstesPeriod
+    return highestPeriod
